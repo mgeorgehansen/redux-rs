@@ -1,0 +1,7 @@
+[package]
+name = "redux-counter-example"
+version = "0.1.0"
+authors = ["Jeroen Vervaeke <jeroen@vervaeke.nu>"]
+
+[dependencies]
+"redux-rs" = { path="../.." }
