@@ -13,3 +13,5 @@ keywords = ["redux", "state", "predictable"]
 
 [badges]
 travis-ci = { repository = "jeroenvervaeke/redux-rs", branch = "master" }
+codecov = { repository = "jeroenvervaeke/redux-rs", branch = "master", service = "github" }
+maintenance = { status = "actively-developed" }
