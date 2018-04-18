@@ -24,6 +24,10 @@ impl<TState, TAction> Store<TState, TAction> {
     pub fn subscribe(&mut self, subscriber: Subscriber<TState>) {
         self.subscribers.push(subscriber);
     }
+
+    pub fn state(&self) -> &TState {
+        &self.state
+    }
 }
 
 #[cfg(test)]
@@ -48,8 +52,8 @@ mod tests {
         let store = Store::<i32, TestActions>::new(test_reducer, 1);
 
         // Test if the default state is set as desired
-        let expected = 1;
-        let actual = store.state;
+        let expected = &1;
+        let actual = store.state();
         assert_eq!(expected, actual)
     }
 
@@ -62,8 +66,8 @@ mod tests {
         store.dispatch(TestActions::INCREMENT(1));
 
         // Test if the new state has the desired value
-        let expected = 2;
-        let actual = store.state;
+        let expected = &2;
+        let actual = store.state();
         assert_eq!(expected, actual)
     }
 
@@ -76,8 +80,8 @@ mod tests {
         store.dispatch(TestActions::DECREMENT(1));
 
         // Test if the new state has the desired value
-        let expected = 0;
-        let actual = store.state;
+        let expected = &0;
+        let actual = store.state();
         assert_eq!(expected, actual)
     }
 
@@ -95,8 +99,8 @@ mod tests {
         store.dispatch(TestActions::INCREMENT(14));
 
         // Test if the new state has the desired value
-        let expected = -80;
-        let actual = store.state;
+        let expected = &-80;
+        let actual = store.state();
         assert_eq!(expected, actual)
     }
 }

@@ -9,6 +9,7 @@ fn main() {
     store.dispatch(CounterActions::DECREMENT(2));
     store.dispatch(CounterActions::INCREMENT(3));
 
+    println!("{}", store.state());
 }
 
 enum CounterActions {
