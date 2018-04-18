@@ -5,6 +5,9 @@ authors = ["Jeroen Vervaeke <jeroen@vervaeke.nu>"]
 description = "Redux-rs is a predictable state container for rust apps. It is heavily inspired by redux"
 repository = "https://github.com/jeroenvervaeke/redux-rs"
 readme = "README.md"
+license = "MIT"
+license-file = "LICENSE"
+keywords = ["redux", "state", "predictable"]
 
 [dependencies]
 
