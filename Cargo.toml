@@ -1,6 +1,12 @@
 [package]
 name = "redux-rs"
-version = "0.1.0"
+version = "0.0.1"
 authors = ["Jeroen Vervaeke <jeroen@vervaeke.nu>"]
+description = "Redux-rs is a predictable state container for rust apps. It is heavily inspired by redux"
+repository = "https://github.com/jeroenvervaeke/redux-rs"
+readme = "README.md"
 
 [dependencies]
+
+[badges]
+travis-ci = { repository = "jeroenvervaeke/redux-rs", branch = "master" }
