@@ -1,5 +1,5 @@
 pub type Reducer<TState, TAction> = fn(&TState, TAction) -> TState;
-pub type Subscriber<TState> = fn(&TState);
+pub type Subscriber<TState> = Box<Fn(&TState)>;
 
 pub struct Store<TState, TAction> {
     reducer: Reducer<TState, TAction>,
